@@ -4,10 +4,10 @@ const express = require('express');
 require('dotenv').config();
 
 
-const participantRouter = require('./routers/studentRouter');
+const userRouter = require('./routers/userRouter');
 const app = express();
 app.use(express.json());
-app.use('/api/participant/', participantRouter)
+app.use('/api/v1', userRouter)
 
 const port = process.env.PORT
 
